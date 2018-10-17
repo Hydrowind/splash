@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: Hydrowind/splash
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: contents
+    create: true
+    slug: "{{month}}-{{day}}-{{year}}-{{slug}}.md"
+    fields:
+      - { name: path, label: Path, widget: string }
+      - { name: author, label: Author, widget: string }
+      - { name: date, label: Date, widget: date, format: MM-DD-YYYY }
+      - { name: title, label: Title, widget: string }
+      - { name: cover, label: Cover, widget: image }
+      - { name: tags, label: Tags, widget: list }
+      - { name: body, label: Body, widget: markdown }

@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+.Footer{
+    height: 10vh;
+    padding: getSpacing(sm);
+    display: grid;
+    grid-template: 'left right' 100% / 50% 50%;
+
+    *{
+        font-weight: 700;
+        color: getColor(nile-primary);
+    }
+
+    .left{
+        grid: left;
+        @extend .flex-center;
+        justify-content: flex-start;
+    }
+    
+    .right{
+        grid: right;
+        @extend .flex-center;
+        justify-content: flex-end;
+    }
+}

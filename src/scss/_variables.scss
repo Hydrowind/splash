@@ -1,0 +1,57 @@
+@function getColor($key){
+    @return map-get($colors, $key)
+}
+
+@function getSpacing($key){
+    @return map-get($spacing, $key)
+}
+
+$colors: (
+    nile-primary    : #213F52,
+    nile-secondary  : #92A0A9,
+    black-primary   : #171818,
+    black-secondary : #C0C0C0,
+    white-primary   : #FFFFFF,
+    white-secondary : #4E4F4F,
+    background: #FAFAFA,
+);
+
+$spacing: (
+    xs: 1rem,
+    sm: 2.5rem,
+    md: 5rem,
+    lg: 7.5rem,
+    xl: 10rem,
+);
+
+.flex-center{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+// .font-web-title{
+//     font-size: 5rem;
+//     font-weight: 900;
+// }
+// .font:motto{
+//     font-size: 3rem;
+//     font-weight: 800;
+// }
+// .font:title{
+//     font-size: 3rem;
+//     font-weight: 700;
+// }
+// .font:subtitle{
+//     font-size: 2rem;
+//     font-weight: 600;
+// }
+// .font:menu{
+//     font-size: 1.5rem;
+//     font-weight: 500;
+// }
+// .font:content{
+//     font-size: 1rem;
+//     font-weight: 400;
+// }

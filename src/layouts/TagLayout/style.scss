@@ -1,0 +1,56 @@
+@import '../../scss/index';
+@import '../../scss/variables';
+
+.TagLayout{
+    width: 100%;
+    display: grid;
+    grid-template: 'menubar main sidebar' 100% / 25% 50% 25%;
+
+    .menubar{
+        grid: menubar;
+        padding: getSpacing(xs);
+    }
+
+    .main{
+        grid: main;
+        padding: getSpacing(xs);
+
+        .tags-container{
+            display: flex;
+            flex-flow: row wrap;
+
+            a{ text-decoration: none }
+
+            .tag{
+                margin: getSpacing(xs);
+                background: getColor(white-primary);
+                color: getColor(black-primary);
+                border-radius: 99rem;
+                padding: 0 getSpacing(xs);
+                font-size: 1.2rem;
+                font-weight: 700;
+                box-shadow: .1rem .1rem .3rem getColor(black-secondary);
+
+                &:hover{
+                    font-weight: 700;
+                    background: getColor(white-primary);
+                    color: getColor(nile-primary);
+                }
+
+                &.active{
+                    background: getColor(black-primary);
+                    color: getColor(white-primary);
+                }
+            }
+        }
+
+        div.ArticleCard{
+            margin-bottom: getSpacing(md);
+        }
+    }
+
+    .sidebar{
+        grid: sidebar;
+        padding: getSpacing(xs);
+    }
+}

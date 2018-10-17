@@ -1,0 +1,37 @@
+@import '../../scss/variables';
+
+.Navigation{
+    width: 50%;
+    float: right;
+
+    a{text-decoration: none}
+    
+    .nav-item{
+        &:not(:last-child){
+            margin-bottom: getSpacing(xs);
+        }
+
+        width: 100%;
+        padding: getSpacing(xs);
+        color: getColor(nile-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:hover{
+            border-radius: .5rem;
+            background: getColor(white-primary);
+            box-shadow: 0 0 .2rem getColor(black-secondary);
+        }
+        
+        &.active{
+            *{
+                font-weight: 700;
+            }
+            border-radius: .5rem;
+            background: getColor(white-primary);
+            color: getColor(nile-primary);
+            box-shadow: 0 0 .2rem getColor(black-secondary);
+        }
+    }
+}

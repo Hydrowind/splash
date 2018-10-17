@@ -1,0 +1,13 @@
+@import '../../scss/variables';
+
+.Widget{
+    
+    h4{
+        color: getColor(nile-primary);
+    }
+
+    h5{
+        color: getColor(nile-secondary);
+        text-align: justify;
+    }
+}

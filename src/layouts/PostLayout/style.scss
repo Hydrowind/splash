@@ -1,0 +1,30 @@
+@import '../../scss/variables';
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+.PostLayout{
+    width: 100%;
+    display: grid;
+    grid-template: 'menubar main sidebar' 100% / 70% 25%;
+
+    .main{
+        grid: main;
+        padding: getSpacing(sm);
+    }
+
+    .sidebar{
+        grid: sidebar;
+        padding: getSpacing(sm);
+
+        div:not(:last-child){
+            margin-bottom: getSpacing(sm);
+        }
+    }
+}

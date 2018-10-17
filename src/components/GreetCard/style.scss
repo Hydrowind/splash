@@ -1,0 +1,48 @@
+@import '../../scss/variables';
+
+.GreetCard{
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: .1rem .1rem 2rem getColor(black-secondary);
+
+    display: grid;
+    grid-template-areas: 'head' 50% 'body' 50% / 100%;
+
+    .head{
+        grid: head;
+        padding: getSpacing(xl);
+        background: getColor(black-primary);
+        
+        
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        h3{
+            color: getColor(white-primary);
+        }
+        h4{
+            color: getColor(white-secondary);
+        }
+    }
+
+    .body{
+        grid: body;
+        padding: getSpacing(xl);
+        background: getColor(white-primary);
+        display: flex;
+        flex-flow: column nowrap;
+
+        blockquote{
+            border-left: .2rem solid getColor(black-primary);
+            padding-left: getSpacing(xs);
+            
+            h6{ font-weight: 700 }
+            
+            .author{
+                color: getColor(nile-secondary);    
+            }
+        }
+    }
+}

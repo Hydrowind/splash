@@ -1,0 +1,16 @@
+@import './variables';
+
+html{ font-size: 62.5%; font-family: Poppins, Arial, Helvetica, sans-serif; }
+body{ background: getColor(background); }
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+
+h1{ font-size: 5rem; font-weight: 900; }
+h2{ font-size: 2rem; font-weight: 800; }
+h3{ font-size: 3rem; font-weight: 700; }
+h4{ font-size: 1.5rem; font-weight: 600; }
+h5{ font-size: 1.5rem; font-weight: 500; }
+h6{ font-size: 1.2rem; font-weight: 400; }
+
+// Global Classes
+.gutter-bottom{ margin-bottom: getSpacing(sm) }
+.material-icons{ font-family: 'Material Icons' }

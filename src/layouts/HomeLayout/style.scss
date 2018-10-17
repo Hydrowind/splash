@@ -1,0 +1,27 @@
+@import '../../scss/index';
+@import '../../scss/variables';
+
+.HomeLayout{
+    width: 100%;
+    display: grid;
+    grid-template: 'menubar main sidebar' 100% / 25% 50% 25%;
+
+    .menubar{
+        grid: menubar;
+        padding: getSpacing(xs);
+    }
+
+    .main{
+        grid: main;
+        padding: getSpacing(xs);
+
+        div.ArticleCard, div.GreetCard{
+            margin-bottom: getSpacing(md);
+        }
+    }
+
+    .sidebar{
+        grid: sidebar;
+        padding: getSpacing(xs);
+    }
+}

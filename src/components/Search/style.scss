@@ -1,0 +1,27 @@
+@import '../../scss/variables';
+
+.Search{
+    
+    width: 75%;
+    padding: getSpacing(xs);
+    border-radius: .5rem;
+    background: getColor(white-primary);
+    box-shadow: 0 0 .2rem getColor(black-secondary);
+    overflow: hidden;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    *{
+        color: getColor(nile-secondary);
+    }
+    
+    input{
+        width: 100%;
+        outline: none;
+        border: none;
+        
+        font-family: Poppins, Arial;
+    }
+}

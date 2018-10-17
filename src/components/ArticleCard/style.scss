@@ -1,0 +1,74 @@
+@import '../../scss/variables';
+
+.ArticleCard{
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: .1rem .1rem .5rem getColor(black-secondary);
+    
+    display: grid;
+    grid-template-areas: 'head' 50% 'body' 50% / 100%;
+    
+    a{text-decoration: none}
+
+    .head{
+        height: 30rem;
+        .cover{
+            width: 100%; height: 100%;
+        }
+    }
+
+    .body{
+        grid: body;
+        padding: getSpacing(sm);
+        background: getColor(white-primary);
+        display: flex;
+        flex-flow: column wrap;
+
+        h3{
+            color: getColor(nile-primary);
+        }
+
+        h4{
+            color: getColor(white-secondary);
+            display: flex;
+        }
+
+        h6{
+            color: getColor(nile-secondary);
+        }
+
+        .tags{
+            display: flex;
+            flex-flow: row wrap;
+
+            a{ text-decoration: none }
+            a:not(:first-child){ margin-left: getSpacing(xs); }
+
+            .tag{
+                background: getColor(white-primary);
+                color: getColor(black-primary);
+                border-radius: 99rem;
+                padding: 0 getSpacing(xs);
+                font-size: 1.2rem;
+                font-weight: 700;
+                box-shadow: .1rem .1rem .3rem getColor(black-secondary);
+            }
+        }
+
+        .btn{
+            align-self: center;
+            display: inline-block;
+            border: .2rem solid getColor(black-primary);
+            border-radius: 99rem;
+            padding: 0 getSpacing(xs);
+            background: getColor(black-primary);
+            color: getColor(white-primary);
+            transition: .5s;
+
+            &:hover{
+                background: getColor(white-primary);
+                color: getColor(black-primary);
+            }
+        }
+    }
+}
