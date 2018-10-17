@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 import MaterialIcons from '../MaterialIcons'
-import Cover from '../../images/no_image.svg'
+import DefaultCover from '../../images/no_image.svg'
 import './style.scss'
 
 const ArticleCard = ({title, coverUrl, author, date, excerpt, path, tags}) => (
     <div className='ArticleCard'>
         <div className='head'>
-            {coverUrl ? <Img className='cover' fluid={coverUrl}/> : <img className='cover' style={{padding: '2rem'}}alt='cover' src={Cover}/>}
+            <img className='cover' style={{padding: '2rem'}}alt='cover' src={ coverUrl || DefaultCover}/>
         </div>
         <div className='body'>
             <h3>{title || 'Give me a Title!'}</h3>
