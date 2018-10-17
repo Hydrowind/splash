@@ -10,7 +10,7 @@ collections:
     label: "Posts"
     folder: "contents"
     create: true
-    slug: "{{month}}-{{day}}-{{year}}-{{slug}}.md"
+    slug: "{{month}}-{{day}}-{{year}}-{{slug}}"
     fields:
       - { name: path, label: Path, widget: string }
       - { name: author, label: Author, widget: string, default: Herdhiantoko Fathani }
