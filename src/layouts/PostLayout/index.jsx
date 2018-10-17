@@ -21,7 +21,7 @@ const PostLayout = ({data}) => (
         </Helmet>
         <div className='PostLayout'>
             <div className='main'>
-                <PostCard title={data.markdownRemark.frontmatter.title} content={data.markdownRemark.html} coverUrl={data.markdownRemark.frontmatter.cover.childImageSharp.fluid}/>
+                <PostCard title={data.markdownRemark.frontmatter.title} content={data.markdownRemark.html} coverUrl={data.markdownRemark.frontmatter.cover}/>
             </div>
             <div className='sidebar'>
                 {/* <Search/> */}

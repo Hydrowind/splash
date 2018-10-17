@@ -31,7 +31,7 @@ const HomeLayout = ({data, pathContext}) => (
                 <GreetCard/>
                 {data.allMarkdownRemark.edges.map(p =>
                     <ArticleCard key={p.node.id}
-                        coverUrl={p.node.frontmatter.cover.childImageSharp.fluid}
+                        coverUrl={p.node.frontmatter.cover}
                         title={p.node.frontmatter.title}
                         excerpt={p.node.excerpt}
                         path={p.node.frontmatter.path}
