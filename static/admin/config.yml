@@ -8,7 +8,7 @@ public_folder: assets
 collections:
   - name: "post"
     label: "Posts"
-    folder: "contents"
+    folder: "src/contents"
     create: true
     slug: "{{month}}-{{day}}-{{year}}-{{slug}}.md"
     fields:
