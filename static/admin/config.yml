@@ -6,15 +6,15 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: contents
+  - name: post
+    label: Posts
+    folder: /contents
     create: true
     slug: "{{month}}-{{day}}-{{year}}-{{slug}}.md"
     fields:
       - { name: path, label: Path, widget: string }
-      - { name: author, label: Author, widget: string }
-      - { name: date, label: Date, widget: date, format: MM-DD-YYYY }
+      - { name: author, label: Author, widget: string, default: Herdhiantoko Fathani }
+      - { name: date, label: Date, widget: date, format: DD-MM-YYYY }
       - { name: title, label: Title, widget: string }
       - { name: cover, label: Cover, widget: image }
       - { name: tags, label: Tags, widget: list }
