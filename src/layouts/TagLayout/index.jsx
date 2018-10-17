@@ -73,14 +73,7 @@ export const postQuery = graphql`
                         date
                         title
                         tags
-                        cover{
-                            publicURL
-                            childImageSharp{
-                                fluid(maxWidth: 1080, maxHeight: 720) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
+                        cover
                     }
                 }
             }
@@ -98,14 +91,7 @@ export const postQuery = graphql`
                         date
                         title
                         tags
-                        cover{
-                            publicURL
-                            childImageSharp{
-                                fluid(maxWidth: 1080, maxHeight: 720) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
+                        cover
                     }
                 }
             }
