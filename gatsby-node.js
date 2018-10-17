@@ -12,7 +12,6 @@ exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions
   
     return new Promise((resolve, reject) => {
-        // const blogPostTemplate = path.resolve(`src/components/PostCard/index.jsx`)
         const blogPostTemplate = path.resolve(`src/layouts/PostLayout/index.jsx`)
         const indexTemplate = path.resolve(`src/layouts/HomeLayout/index.jsx`)
         // Query for markdown nodes to use in creating pages.
@@ -22,12 +21,12 @@ exports.createPages = ({ graphql, actions }) => {
                 {
                 allMarkdownRemark(limit: 1000) {
                     edges {
-                    node {
-                        frontmatter {
-                            path
-                            tags
+                        node {
+                            frontmatter {
+                                path
+                                tags
+                            }
                         }
-                    }
                     }
                 }
                 }
@@ -39,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
 
                 // Create blog-list pages
                 const posts = result.data.allMarkdownRemark.edges
-                const postsPerPage = 1
+                const postsPerPage = 5
                 const numPages = Math.ceil(posts.length / postsPerPage)
 
                 const paginationPath = (prefix, index, totalPages) => {
@@ -59,8 +58,8 @@ exports.createPages = ({ graphql, actions }) => {
                         context: {
                             limit: postsPerPage,
                             skip: i * postsPerPage,
-                            prevPath: paginationPath('/page', i - 1, numPages),
-                            nextPath: paginationPath('/page', i + 1, numPages),
+                            prevPath: paginationPath('/page', i + 1, numPages),
+                            nextPath: paginationPath('/page', i - 1, numPages),
                         },
                     })
                 })
