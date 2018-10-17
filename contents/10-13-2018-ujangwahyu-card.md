@@ -1,4 +1,4 @@
-﻿---
+---
 path: /ujangwahyu-card
 author: Herdhiantoko Fathani
 date: 13-10-2018
@@ -9,8 +9,6 @@ tags:
   - scss
   - css
 ---
-![cover](/assets/ujangwahyu-card.png)
-
 # **Card - Ujang Wahyu**
 
 Sebuah deskripsi singkat untuk mengenai card ini.\
@@ -18,20 +16,17 @@ Sebuah deskripsi singkat untuk mengenai card ini.\
 
 ## **Layout Design**
 
-Desain _Card_ ini dapat dibuat menjadi 2 bagian yaitu _**Head**_ dan _**Body**_. Dimana pada bagian _head_ terdapat _**photo profile**_ dan _**cover photo**_, sedangkan pada _body_ terdapat _**title**_, _**subtitle**_, _**text**_, dan _**social links**_.
+Desain _Card_ ini dapat dibuat menjadi 2 bagian yaitu **_Head_** dan **_Body_**. Dimana pada bagian _head_ terdapat **_photo profile_** dan **_cover photo_**, sedangkan pada _body_ terdapat **_title_**, **_subtitle_**, **_text_**, dan **_social links_**.
 
 ![layout-1](/assets/ujangwahyu-layout1.png)
 
- 
-
 ![layout-2](/assets/ujangwahyu-layout2.png)
-
 
 <br><br>
 
 ## **Implementation**
 
-Bahan-bahan yang diperlukan sudah ditentukan melalui _**Layout Design**_. Apa saja yang dibutuhkan adalah:
+Bahan-bahan yang diperlukan sudah ditentukan melalui **_Layout Design_**. Apa saja yang dibutuhkan adalah:
 
 * Head
 * Body
@@ -68,7 +63,7 @@ Dari semua hal yang dibutuhkan ini masing-masing dari mereka perlu dibuatkan scr
 <br><br>
 Setelah itu buatkan css untuk memberikan desain pada HTML itu. Desain yang dibuat diawali dengan _class_ **.card-ujangwahyu**. _Card_ ini memiliki tampilan dasar _rounded_ _rectangle_ dengan _aspect ratio_ 4:6 sehingga dapat ditetapkan **_width_ = 300px** dan **_height_ = 450px** yang memenuhi _aspect ratio_ 4:6.
 
-Kemudian untuk layouting digunakan _**Display Grid**_ dengan **2 _row_** dan **1 _column_**. _Row_ dibagi 2 untuk memisahkan antara _Head_ dan _Body_. Berikan _effect shadow_ untuk membuat _card_ terlihat lebih elegan.
+Kemudian untuk layouting digunakan **_Display Grid_** dengan **2 _row_** dan **1 _column_**. _Row_ dibagi 2 untuk memisahkan antara _Head_ dan _Body_. Berikan _effect shadow_ untuk membuat _card_ terlihat lebih elegan.
 
 ```scss
 .card-ujangwahyu {
@@ -88,7 +83,7 @@ Kemudian untuk layouting digunakan _**Display Grid**_ dengan **2 _row_** dan **1
 
 Selanjutnya bagian **Head**. Pada _class_ **.head** terapkan **grid-area** dengan **“head”** sesuai dengan yang telah didefinisikan pada **grid-template** sebelumnya. Sepertinya hanya itu yang diperlukan _class_ **.head**.
 
-_Class_ **.cover** memiliki _height_ setengah dari **Head**, sehingga dapat diberi nilai **50%** dari _height_ _parent_ nya. Berikan _attribute_ _**object-fit: cover**_ supaya gambar dapat menyesuaikan ukuran penampungnya
+_Class_ **.cover** memiliki _height_ setengah dari **Head**, sehingga dapat diberi nilai **50%** dari _height_ _parent_ nya. Berikan _attribute_ **_object-fit: cover_** supaya gambar dapat menyesuaikan ukuran penampungnya
 
 ```scss
 .cover{
@@ -98,9 +93,9 @@ _Class_ **.cover** memiliki _height_ setengah dari **Head**, sehingga dapat dibe
 }
 ```
 
-Class **.photo** pada _layout_ berada di posisi di tengah-tengah dari dari **Head**, untuk memposisikan _class_ ini bisa menggunakan metode _**position: absolute**_. Karena _class_ .photo menggunakan _position absolute_, _**posisition relative**_ harus diterapkan pada parent dari _class_ **.photo** yaitu _class_ **.head**.
+Class **.photo** pada _layout_ berada di posisi di tengah-tengah dari dari **Head**, untuk memposisikan _class_ ini bisa menggunakan metode **_position: absolute_**. Karena _class_ .photo menggunakan _position absolute_, **_posisition relative_** harus diterapkan pada parent dari _class_ **.photo** yaitu _class_ **.head**.
 
-Berikan _**border-radius: 50%**_ untuk membuat _class_ ini berbentuk lingkaran. Berikan juga warna _background_ yang sama dengan warna dasar _Card_, kemudian berikan _**padding**_ supaya photo yang tampil berukuran lebih kecil dari penampungnya untuk memberikan _effect stroke_ pada _photo profile_.
+Berikan **_border-radius: 50%_** untuk membuat _class_ ini berbentuk lingkaran. Berikan juga warna _background_ yang sama dengan warna dasar _Card_, kemudian berikan **_padding_** supaya photo yang tampil berukuran lebih kecil dari penampungnya untuk memberikan _effect stroke_ pada _photo profile_.
 
 ```scss
 .photo{
@@ -157,11 +152,11 @@ Sejauh ini, apa saja yang telah diimplementasi terlihat seperti berikut:
 
 Bagian **Head** sudah selesai, selanjutnya adalah bagian **Body**. Pada _class_ **.body** terapkan **grid-area** dengan **“body”** sesuai dengan yang telah didefinisikan pada **grid-template** sebelumnya.
 
-Berikan _attribute_ _**text-align: center**_ untuk membuat semua _text_ yang ada di bagian **Body** menjadi rata tengah, lalu berikan _padding_ supaya _Card_ terlihat lebih rapi.
+Berikan _attribute_ **_text-align: center_** untuk membuat semua _text_ yang ada di bagian **Body** menjadi rata tengah, lalu berikan _padding_ supaya _Card_ terlihat lebih rapi.
 
 _Class_ **.title**, **.subtitle**, dan **.text** hanya perlu menyesuaikan ukuran, warna, jarak, dan ketebalan _font_.
 
-_Class_ **.social-icons** tidak akan terpengaruh oleh _**text-align: center**_ sehingga harus dilakukan dengan cara lain. Salah satunya dapat menggunakan metode _**Display Flex**_ yang akan membuat seluruh _list icon_ berada di tengah. Berikan sedikit _margin_ pada **<li>** dan atur ukuran gambar (pastikan _width_ & _height_ memiliki ukuran yang sama).
+_Class_ **.social-icons** tidak akan terpengaruh oleh **_text-align: center_** sehingga harus dilakukan dengan cara lain. Salah satunya dapat menggunakan metode **_Display Flex_** yang akan membuat seluruh _list icon_ berada di tengah. Berikan sedikit _margin_ pada **<li>** dan atur ukuran gambar (pastikan _width_ & _height_ memiliki ukuran yang sama).
 
 ```scss
 <![endif]-->
