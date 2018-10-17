@@ -7,7 +7,7 @@ import './style.scss'
 const ArticleCard = ({title, coverUrl, author, date, excerpt, path, tags}) => (
     <div className='ArticleCard'>
         <div className='head'>
-            <img className='cover' style={{padding: '2rem'}}alt='cover' src={ coverUrl || DefaultCover}/>
+            <img className='cover' alt='cover' src={ coverUrl || DefaultCover}/>
         </div>
         <div className='body'>
             <h3>{title || 'Give me a Title!'}</h3>
